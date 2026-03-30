@@ -1,12 +1,9 @@
 ---
 title: Workspaces vs Repositories 
 author: PT
-theme:
-- Copenhagen
-date:
-- 2023-06-12
+date: 2023-06-12
 ---
-# Worspaces vs Repositories
+# Workspaces vs Repositories
 
 ![](./research_data_cycle.png)
 
