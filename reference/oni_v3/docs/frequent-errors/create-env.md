@@ -1,4 +1,4 @@
-### create .env file
+# create .env file
 run ldacapi `npm run dev`. 
 If get error:
 ```
@@ -47,3 +47,16 @@ So the correct version of `.env`:
 ## Work in local WSL2
 DATABASE_URL="postgresql://ldacapi:ldacapi@localhost:5432/ldacapi?schema=public"
 OPENSEARCH_URL="http://localhost:9200"
+```
+
+In addition, there is also other variables need to be added:
+
+```
+## help you access API
+TOKEN_ADMIN="abc" 
+## vairables that are used in docker-compose.yml
+DB_NAME="ldacapi"
+DB_USER="ldacapi"
+DB_PASSWORD="ldacapi"
+```
+After doing that, need to delete node_modules from Oni-ui and ldacapi, then run `pnpm install`.

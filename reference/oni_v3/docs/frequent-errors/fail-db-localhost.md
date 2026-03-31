@@ -1,4 +1,4 @@
-### Can't reach DB server at localhost error
+# Can't reach DB server at localhost error
 If get error:
 ```
 ubuntu@Ubuntu:~/RAPID/ldacapi$ npm run syncdb

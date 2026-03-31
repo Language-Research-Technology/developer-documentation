@@ -1,4 +1,4 @@
-### @@unique error
+# @@unique error
 
 If get `@@unique` error when running `npm run syncdb`:
 ```
