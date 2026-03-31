@@ -1,4 +1,4 @@
-# ldacapi and ONI-UI setup
+# Backen and frontend development setup
 This instruction help ldaca's development set up ldacapi, oni-ui, arocapi and database before development. All commands are based on Linux WSL2 environment. **Each repository has its own set up step in their own readme files. This instruction can work with those readme files.**
 
 For RAPID project, we use:
