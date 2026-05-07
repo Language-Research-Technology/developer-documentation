@@ -1,3 +1,8 @@
+```
+DRAFT - still adding resources and checking that the info here matches the ro-crate-html-lite repo
+```
+
+
 # Building plant and animal sites using ro-crate-html-lite
 
 This documentation shows how to create a HTML site for a collection of Indigenous plant and animal content. The process can be adapted to any data collection with adjustments as needed to metadata properties and templates as suits the collection.
