@@ -12,11 +12,38 @@ In this example, entries have metadata describing the name and description in an
 The process of creating HTML previews of data uses the RO-Crate data standard, Crate-O and the ro-crate-html-lite library. An RO-Crate is a method of storing data, in which data files (e.g. audio recordings or images) are stored on disk alongside a metadata file and licence information (REF). Crate-O is a browser-based tool for creating or converting RO-Crates, and in this activity will be used to create a spreadsheet of content into an RO-Crate. The ro-crate-html-lite tool is used to generate HTML preview versions of the RO-Crate.
 
 
+
+
+
+
+## Build HTML
+
+To build template-based HTML preview, we first clone the `ro-crate-html-lite` tool repository, add data, then adjust configuration and template files as needed.
+
+
+
+
+### Install
+
+Clone `ro-crate-html-lite` from https://github.com/Language-Research-Technology/ro-crate-html-lite.
+
+Enter the directory and install the dependencies with `npm install .`
+
+
+
+
+### Prepare project
+
+In the `test_data` folder, duplicate the `birds` folder. Name the duplicated folder `test_project` or something to suit your content.
+
+
+
+
 ## Prepare media assets
 
-Convert your media into web-ready formats. Use MP3 for audio, and JPG or PNG for images.
+Organise your collection files into folders. The bird folder uses the structure of a parent `files` directory, with subdirectories for media types `audio` and `images`. In the `audio` directory, subdirectories group the `calls`, `names` and `sentences` recordings.
 
-Organise the collection files into folders. We used the following structure of a parent `files` directory, with subdirectories for `audio` and `images`. In the `audio` directory, we used subdirectories to group the `calls`, `names` and `sentences` recordings.
+TIP: convert your media into web-ready formats. Use MP3 for audio, and JPG or PNG for images.
 
 ```
 files
@@ -43,7 +70,7 @@ When working with existing content that has been compiled for other publications
 
 ### Download template spreadsheet
 
-To suit the RO-Crate preview generation process, the spreadsheet must be in an RO-Crate compatible format. A sample, very generic, RO-Crate template spreadsheet is available here [link]. For projects that are similar to this plant and animal project, use this template [link] as a starting point, as the collection properties have been tailored to the content format.
+To suit the RO-Crate preview generation process, the spreadsheet must be in an RO-Crate compatible format. A sample, very generic, RO-Crate template spreadsheet is available [here](https://www.ldaca.edu.au/resources/user-guides/crate-o/convert-spreadsheet/#template). For projects that are similar to this plant and animal project, use the [bird template](https://github.com/Language-Research-Technology/ro-crate-html-lite/raw/refs/heads/bf-birds/test_data/birds/data/additional-ro-crate-metadata.xlsx) as a starting point, as the collection properties have been tailored to the content format.
 
 
 ### Enter details
@@ -92,29 +119,14 @@ Click `Bulk Add` and browse to the spreadsheet. Click confirm to load the spread
 Click `Save`. This will write a metadata JSON file and default HTML preview file to your working folder.
 
 
-## Build HTML
-
-To build template-based HTML preview, we first clone the `ro-crate-html-lite` tool repository and then adjust configuration and template files as needed.
-
-
-### Install
-
-Clone `ro-crate-html-lite` from https://github.com/Language-Research-Technology/ro-crate-html-lite.
-
-Enter the directory and install the dependencies with `npm install .`
-
-
-### Prepare project
-
-In the `test_data` folder, duplicate the `birds` folder. Rename it `test_project` or something to suit your content.
-
-Move your `files` directory and `ro-crate-metadata.json` into the `test_project/data` folder. Your project should now look like this—
+Now we are ready to make the HTML preview. Your project should look like this...
 
 ```
 test_project
 ├── data
 │   ├── about
 │   ├── files
+│   ├── additional-ro-crate-metadata.xlsx
 │   └── ro-crate-metadata.json
 ├── config.json
 └── templates
@@ -124,6 +136,10 @@ test_project
     └── subobject-template.html
 
 ```
+
+
+
+
 
 
 ### Generate HTML
